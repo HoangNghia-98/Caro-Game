@@ -260,7 +260,6 @@ function init() {
 function render() {
     squares = Array.from(document.querySelectorAll('#board div'));
     board.forEach(function (ele, index) {
-        //this moves the value of the board item into the squares[idx]
         squares[index].textContent = ele;
     });
     messages.textContent = win ? `${win} wins the game!` : `It's ${turn}'s turn!`;

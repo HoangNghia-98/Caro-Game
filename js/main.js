@@ -122,52 +122,6 @@ board2D = Create2DArray(numLine);
 
 /* ----------------- get Winner ---------------- */
 
-function getWinner_3() {
-    let winner = null;
-
-    winningCombos_3.forEach(function (combo, index) {
-        if (board[combo[0]] && board[combo[0]] === board[combo[1]] && board[combo[0]] === board[combo[2]]) winner = board[combo[0]];
-    });
-    return winner ? winner : board.includes('') ? null : 'T';
-};
-
-function getWinner_4() {
-    let winner = null;
-
-    winningCombos_4.forEach(function (combo, index) {
-        if (board[combo[0]] && board[combo[0]] === board[combo[1]] && board[combo[0]] === board[combo[2]] &&
-            board[combo[0]] === board[combo[3]]) {
-            winner = board[combo[0]];
-        }
-    });
-    return winner ? winner : board.includes('') ? null : 'T';
-};
-
-function getWinner_5() {
-    let winner = null;
-
-    winningCombos_5.forEach(function (combo, index) {
-        if (board[combo[0]] && board[combo[0]] === board[combo[1]] && board[combo[0]] === board[combo[2]] &&
-            board[combo[0]] === board[combo[3]] && board[combo[0]] === board[combo[4]]) {
-            winner = board[combo[0]];
-        }
-    });
-    return winner ? winner : board.includes('') ? null : 'T';
-};
-
-function getWinner_6() {
-    let winner = null;
-
-    winningCombos_6.forEach(function (combo, index) {
-        if (board[combo[0]] && board[combo[0]] === board[combo[1]] && board[combo[0]] === board[combo[2]] &&
-            board[combo[0]] === board[combo[3]] && board[combo[0]] === board[combo[4]] &&
-            board[combo[0]] === board[combo[5]]) {
-            winner = board[combo[0]];
-        }
-    });
-    return winner ? winner : board.includes('') ? null : 'T';
-};
-
 function handleTurn() {
     let idx = squares.findIndex(function (square) {  // return index of square that we click
         return square === event.target;
